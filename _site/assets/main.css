@@ -7958,7 +7958,7 @@ body {
     animation: header-bg-in forwards ease-in-out 2s;
     filter: blur(20px); }
     .site-header .logo span {
-      color: #101c4b;
+      color: #284554;
       font-weight: 400;
       font-size: 55px;
       letter-spacing: 0px; }
@@ -8023,7 +8023,7 @@ nav ul {
     nav ul a:hover {
       transform: scale(0.9);
       text-decoration: none;
-      color: #101c4b; }
+      color: #284554; }
 
 .about-us {
   padding: 50px 0; }
@@ -8056,7 +8056,7 @@ nav ul {
         bottom: 0;
         opacity: 0;
         width: 100%;
-        background-color: #101c4b; }
+        background-color: #284554; }
   .about-us .slide-in-right {
     animation: slide-in-right forwards ease-in-out 1s; }
   .about-us .slide-in-left {
