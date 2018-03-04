@@ -1,0 +1,70 @@
+.about-us
+  //background-color: #141414
+  padding: 50px 0
+  //color: white
+  h1:first-of-type
+    padding-bottom: 50px
+    margin-bottom: 0
+
+  .person
+    opacity: 0
+    margin-top: 40px
+    text-align: center
+
+    .photo-person
+      display: inline-block
+      position: relative
+      width: 300px
+      background: pink
+      border:
+        radius: 50%
+      overflow: hidden
+
+      &:hover
+        img
+          transform: scale(1.8)
+        .gold-overly
+          opacity: 0.8
+      img
+        width: 100%
+        transition: 0.4s ease-in-out
+
+      .gold-overly
+        transition: 0.4s ease-in-out
+        position: absolute
+        border-radius: 50%
+        top: 0
+        bottom: 0
+        opacity: 0
+        width: 100%
+        background-color: $primary-color
+
+  .slide-in-right
+    animation: slide-in-right forwards ease-in-out 1s
+
+  .slide-in-left
+    animation: slide-in-left forwards ease-in-out 1s
+
+  @keyframes slide-in-right
+    0%
+      transform: translate(-500px)
+    20%
+      opacity: 1
+    70%
+      transform: translate(20px)
+    100%
+      transform: translate(0)
+      opacity: 1
+
+  @keyframes slide-in-left
+    0%
+      transform: translate(500px)
+    20%
+      opacity: 1
+    70%
+      transform: translate(-20px)
+    100%
+      transform: translate(0)
+      opacity: 1
+
+  .skill

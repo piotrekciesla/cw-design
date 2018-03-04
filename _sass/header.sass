@@ -1,0 +1,67 @@
+.site-header
+  position: relative
+  overflow: hidden
+  min-height: 50vh
+  background:
+    image: url("/assets/images/header-bg4.jpg")
+    size: cover
+    position: center center
+    attachment: fixed
+
+  .logo
+    display: inline-block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: rgba(0, 25, 41, 0.51)
+    font:
+      family: "Montserrat", sans-serif
+      weight: 100
+      size: 20px
+    letter-spacing: 30px
+    text-transform: uppercase
+    padding: 20px 40px
+    color: $white-color
+    border:
+      right: solid $white-color 15px
+      left: solid $white-color 15px
+      bottom: solid $white-color 1px
+      top: solid $white-color 1px
+      radius: 10px
+    animation: header-bg-in forwards ease-in-out 2s
+    filter: blur(20px)
+    span
+      color: $primary-color
+      font-weight: 400
+      font-size: 55px
+      letter-spacing: 0px
+
+  .blur-bg
+    background:
+      image: url("/assets/images/header-bg4.jpg")
+      size: cover
+      position: center center
+      attachment: fixed
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    filter: blur(20px)
+    transform: scale(1.2)
+    width: 100%
+    animation: header-bg-in forwards ease-in-out 5s
+    animation-delay: 1.2s
+
+@keyframes header-bg-in
+  0%
+    filter: blur(20px)
+  20%
+    filter: blur(0px)
+  40%
+    filter: blur(5px)
+  100%
+    filter: blur( 0px)
+
+@import "nav"
