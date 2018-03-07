@@ -1,12 +1,14 @@
 <div class="col col-md-6 person">
-    <h2 class="text-uppercase">{{ include.name }}</h2>
-    <div class="photo-person">
+    <h2 class="text-uppercase text-center">{{ include.name }}</h2>
+    <div class="photo-person text-center">
         <img src="{{ include.photo }}" alt="">
         <div class="gold-overly"></div>
     </div>
-    <div class="skill"></div>
-    <div class="skill"></div>
-    <div class="skill"></div>
-    <div class="skill"></div>
-    <div class="skill"></div>
+    {% for skill in include.skils %}
+        {% assign TitleAndWidth = skill | split: "-" %}
+        {% assign title = TitleAndWidth |first  %}
+        {% assign width = TitleAndWidth |last  %}
+
+        {% include skill-bar.html width = width title = title %}
+    {% endfor %}
 </div>

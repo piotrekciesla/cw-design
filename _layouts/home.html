@@ -7,8 +7,11 @@ layout: default
             O nas
         </h1>
         <div class="row person-row">
-            {% include person.html name="Asia" photo="assets/images/asia.jpg" %}
-            {% include person.html name="Piotrek" photo="assets/images/piotrek.jpg" %}
+            {% assign asia_skils = "PS-20,AI-25,HTML-50,JS-80" | split: "," %}
+            {% assign piotrek_skils = "PS-25,AI-50,HTML-30,JS-90" | split: "," %}
+
+            {% include person.html name="Asia" photo="assets/images/asia.jpg"  skils = asia_skils %}
+            {% include person.html name="Piotrek" photo="assets/images/piotrek.jpg" skils= piotrek_skils %}
         </div>
     </div>
 </div>

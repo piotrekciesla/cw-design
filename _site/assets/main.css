@@ -7958,7 +7958,7 @@ body {
     animation: header-bg-in forwards ease-in-out 2s;
     filter: blur(20px); }
     .site-header .logo span {
-      color: #284554;
+      color: #ff7729;
       font-weight: 400;
       font-size: 55px;
       letter-spacing: 0px; }
@@ -8023,7 +8023,7 @@ nav ul {
     nav ul a:hover {
       transform: scale(0.9);
       text-decoration: none;
-      color: #284554; }
+      color: #ff7729; }
 
 .about-us {
   padding: 50px 0; }
@@ -8056,7 +8056,7 @@ nav ul {
         bottom: 0;
         opacity: 0;
         width: 100%;
-        background-color: #284554; }
+        background-color: #ff7729; }
   .about-us .slide-in-right {
     animation: slide-in-right forwards ease-in-out 1s; }
   .about-us .slide-in-left {
@@ -8081,3 +8081,21 @@ nav ul {
   100% {
     transform: translate(0);
     opacity: 1; } }
+  .about-us .skill-container {
+    text-align: right; }
+  .about-us .skil-title {
+    display: inline-block; }
+  .about-us .skill-bar {
+    height: 100%;
+    width: 0%;
+    transition: 0.5s ease-in-out 1s;
+    border-radius: 2px;
+    background-color: #ff7729; }
+  .about-us .skill {
+    display: inline-block;
+    margin: 5px 20px;
+    margin-right: auto;
+    height: 4px;
+    width: 70%;
+    background-color: #e2e2e2;
+    border-radius: 2px; }
