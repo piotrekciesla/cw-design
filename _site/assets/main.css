@@ -7931,62 +7931,87 @@ body {
 .site-header {
   position: relative;
   overflow: hidden;
-  min-height: 50vh;
-  background-image: url("/assets/images/header-bg4.jpg");
+  min-height: 70vh;
+  background-image: url("/assets/images/header-bg3.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed; }
-  .site-header .logo {
+  .site-header .logo-container {
     display: inline-block;
     position: absolute;
+    overflow: hidden;
+    text-align: center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 25, 41, 0.51);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 100;
-    font-size: 20px;
-    letter-spacing: 30px;
-    text-transform: uppercase;
-    padding: 20px 40px;
-    color: #FDFFFF;
-    border-right: solid #FDFFFF 15px;
-    border-left: solid #FDFFFF 15px;
+    width: 0;
+    height: 0;
+    border-right: solid #FDFFFF 1px;
+    border-left: solid #FDFFFF 1px;
     border-bottom: solid #FDFFFF 1px;
     border-top: solid #FDFFFF 1px;
     border-radius: 10px;
-    animation: header-bg-in forwards ease-in-out 2s;
-    filter: blur(20px); }
-    .site-header .logo span {
-      color: #ff7729;
-      font-weight: 400;
-      font-size: 55px;
-      letter-spacing: 0px; }
-  .site-header .blur-bg {
-    background-image: url("/assets/images/header-bg4.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    filter: blur(20px);
-    transform: scale(1.2);
-    width: 100%;
-    animation: header-bg-in forwards ease-in-out 5s;
-    animation-delay: 1.2s; }
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center center;
+    background: rgba(0, 25, 41, 0.51);
+    animation: header-bg-in forwards 2s;
+    animation-delay: 0.8s; }
+    .site-header .logo-container .logo {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "Montserrat", sans-serif;
+      font-weight: 100;
+      font-size: 20px;
+      margin-left: 5px;
+      letter-spacing: 30px;
+      text-transform: uppercase;
+      padding: 0px 0px;
+      color: #FDFFFF; }
+      .site-header .logo-container .logo span {
+        color: #e5663d;
+        font-weight: 400;
+        font-size: 55px;
+        letter-spacing: 0px; }
 
 @keyframes header-bg-in {
   0% {
-    filter: blur(20px); }
-  20% {
-    filter: blur(0px); }
-  40% {
-    filter: blur(5px); }
+    width: 0px;
+    height: 0px;
+    border-right: solid #FDFFFF 1px;
+    border-left: solid #FDFFFF 1px;
+    border-bottom: solid #FDFFFF 1px;
+    border-top: solid #FDFFFF 1px;
+    transform: translate(-50%, -50%) rotate(90deg); }
+  10% {
+    width: 0px;
+    padding: 20px 0px;
+    height: 108px;
+    transform: translate(-50%, -50%) rotate(0deg); }
+  10% {
+    width: 0px;
+    transform: translate(-50%, -50%) rotate(90deg); }
+  30% {
+    width: 0px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    border-right: solid #FDFFFF 1px;
+    border-left: solid #FDFFFF 1px;
+    border-bottom: solid #FDFFFF 1px;
+    border-top: solid #FDFFFF 1px; }
+  42% {
+    width: 0px;
+    padding: 20px 0px;
+    transform: translate(-50%, -50%) rotate(0deg); }
   100% {
-    filter: blur(0px); } }
+    padding: 20px 40px;
+    width: 460px;
+    height: 108px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    border-right: solid #FDFFFF 15px;
+    border-left: solid #FDFFFF 15px;
+    border-bottom: solid #FDFFFF 1px;
+    border-top: solid #FDFFFF 1px; } }
 nav ul {
   position: absolute;
   bottom: 0;
@@ -8023,7 +8048,7 @@ nav ul {
     nav ul a:hover {
       transform: scale(0.9);
       text-decoration: none;
-      color: #ff7729; }
+      color: #e5663d; }
 
 .about-us {
   padding: 50px 0; }
@@ -8056,7 +8081,7 @@ nav ul {
         bottom: 0;
         opacity: 0;
         width: 100%;
-        background-color: #ff7729; }
+        background-color: #e5663d; }
   .about-us .slide-in-right {
     animation: slide-in-right forwards ease-in-out 1s; }
   .about-us .slide-in-left {
@@ -8082,20 +8107,23 @@ nav ul {
     transform: translate(0);
     opacity: 1; } }
   .about-us .skill-container {
-    text-align: right; }
-  .about-us .skil-title {
-    display: inline-block; }
-  .about-us .skill-bar {
-    height: 100%;
-    width: 0%;
-    transition: 0.5s ease-in-out 1s;
-    border-radius: 2px;
-    background-color: #ff7729; }
-  .about-us .skill {
-    display: inline-block;
-    margin: 5px 20px;
-    margin-right: auto;
-    height: 4px;
-    width: 70%;
-    background-color: #e2e2e2;
-    border-radius: 2px; }
+    text-align: right;
+    padding: 0 10%; }
+    .about-us .skill-container .skil-title {
+      display: inline-block;
+      margin-left: 20px; }
+    .about-us .skill-container .skill-bar {
+      height: 100%;
+      width: 0%;
+      transition: 0.5s ease-in-out 1s;
+      border-radius: 2px;
+      background-color: #e5663d; }
+    .about-us .skill-container .skill {
+      float: right;
+      display: inline-block;
+      margin: 5px 20px;
+      margin-right: auto;
+      height: 4px;
+      width: 70%;
+      background-color: #e2e2e2;
+      border-radius: 2px; }

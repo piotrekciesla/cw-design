@@ -1,67 +1,101 @@
 .site-header
   position: relative
   overflow: hidden
-  min-height: 50vh
+  min-height: 70vh
   background:
-    image: url("/assets/images/header-bg4.jpg")
+    image: url("/assets/images/header-bg3.jpg")
     size: cover
     position: center center
     attachment: fixed
 
-  .logo
+  .logo-container
     display: inline-block
     position: absolute
+    overflow: hidden
+    text-align: center
     top: 50%
     left: 50%
-    transform: translate(-50%, -50%)
+    width: 0
+    height: 0
+    border:
+      right: solid $white-color 1px
+      left: solid $white-color 1px
+      bottom: solid $white-color 1px
+      top: solid $white-color 1px
+      radius: 10px
+    transform: translate(-50%, -50%) rotate(90deg)
+    transform-origin: center center
     background: rgba(0, 25, 41, 0.51)
-    font:
-      family: "Montserrat", sans-serif
-      weight: 100
-      size: 20px
-    letter-spacing: 30px
-    text-transform: uppercase
+    animation: header-bg-in forwards 2s
+    animation-delay: 0.8s
+
+    .logo
+      display: inline-block
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      font:
+        family: "Montserrat", sans-serif
+        weight: 100
+        size: 20px
+      margin-left: 5px
+      letter-spacing: 30px
+      text-transform: uppercase
+      padding: 0px 0px
+      color: $white-color
+
+
+      span
+        color: $primary-color
+        font-weight: 400
+        font-size: 55px
+        letter-spacing: 0px
+
+@keyframes header-bg-in
+
+
+  0%
+    width: 0px
+    height: 0px
+    border:
+      right: solid $white-color 1px
+      left: solid $white-color 1px
+      bottom: solid $white-color 1px
+      top: solid $white-color 1px
+    transform: translate(-50%, -50%) rotate(90deg)
+
+  10%
+    width: 0px
+    padding: 20px 0px
+    height: 108px
+    transform: translate(-50%, -50%) rotate(0deg)
+
+  10%
+    width: 0px
+    transform: translate(-50%, -50%) rotate(90deg)
+
+  30%
+    width: 0px
+    transform: translate(-50%, -50%) rotate(0deg)
+    border:
+      right: solid $white-color 1px
+      left: solid $white-color 1px
+      bottom: solid $white-color 1px
+      top: solid $white-color 1px
+  42%
+    width: 0px
+    padding: 20px 0px
+    transform: translate(-50%, -50%) rotate(0deg)
+  100%
     padding: 20px 40px
-    color: $white-color
+    width: 460px
+    height: 108px
+    transform: translate(-50%, -50%) rotate(0deg)
     border:
       right: solid $white-color 15px
       left: solid $white-color 15px
       bottom: solid $white-color 1px
       top: solid $white-color 1px
-      radius: 10px
-    animation: header-bg-in forwards ease-in-out 2s
-    filter: blur(20px)
-    span
-      color: $primary-color
-      font-weight: 400
-      font-size: 55px
-      letter-spacing: 0px
-
-  .blur-bg
-    background:
-      image: url("/assets/images/header-bg4.jpg")
-      size: cover
-      position: center center
-      attachment: fixed
-    position: absolute
-    top: 0
-    bottom: 0
-    right: 0
-    left: 0
-    filter: blur(20px)
-    transform: scale(1.2)
-    width: 100%
-    animation: header-bg-in forwards ease-in-out 5s
-    animation-delay: 1.2s
-
-@keyframes header-bg-in
-  0%
-    filter: blur(20px)
-  20%
-    filter: blur(0px)
-  40%
-    filter: blur(5px)
-  100%
-    filter: blur( 0px)
 
 @import "nav"
